@@ -35,11 +35,9 @@ class Waiter
   def best_average_tipper
     tips_by_customer = meals.inject({}) do |memo, meal|
       customer = meal.customer 
-      binding.pry 
       if memo[customer] == nil 
         memo[customer] = []
       end 
-      binding.pry 
       memo[customer] << meal.tip 
       memo 
     end
@@ -47,7 +45,6 @@ class Waiter
       memo[customer] = tips.reduce(){|memo, tip| memo += tip}
       memo[customer] /= tips.size 
     end 
-    binding.pry
     averages_by_customer.max{|cust_a, cust_b| cust_a.value <=> cust_b.value}.key
   end 
   
