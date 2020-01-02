@@ -38,7 +38,8 @@ class Waiter
       else 
         memo[customer] << meal.tip 
       end 
-      
-    end 
+    end
+    
   end 
+  
 end
