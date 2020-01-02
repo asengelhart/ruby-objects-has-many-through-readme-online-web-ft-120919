@@ -44,6 +44,7 @@ class Waiter
     averages_by_customer = tips_by_customer.inject({}) do |memo, (customer, tips)|
       memo[customer] = tips.reduce(){|memo, tip| memo += tip}
       memo[customer] /= tips.size 
+      memo 
     end 
     averages_by_customer.max{|cust_a, cust_b| cust_a.value <=> cust_b.value}.key
   end 
