@@ -47,7 +47,7 @@ class Waiter
       memo 
     end 
     binding.pry
-    averages_by_customer.max{|cust_a, cust_b| cust_a.value <=> cust_b.value}.key
+    averages_by_customer.each{|key, val| return key if val == averages_by_customer.values.max}
   end 
   
 end
