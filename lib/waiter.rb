@@ -39,6 +39,7 @@ class Waiter
       if memo[customer] == nil 
         memo[customer] = []
       end 
+      binding.pry 
       memo[customer] << meal.tip 
     end
     averages_by_customer = tips_by_customer.inject({}) do |memo, (customer, tips)|
