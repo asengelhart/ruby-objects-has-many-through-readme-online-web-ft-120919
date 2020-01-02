@@ -35,6 +35,7 @@ class Waiter
   def best_average_tipper
     tips_by_customer = meals.inject({}) do |memo, meal|
       customer = meal.customer 
+      binding.pry 
       if memo[customer] == nil 
         memo[customer] = []
       end 
