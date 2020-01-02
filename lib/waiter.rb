@@ -27,7 +27,6 @@ class Waiter
     best_tipped_meal = meals.max do |meal_a, meal_b|
       meal_a.tip <=> meal_b.tip 
     end
-    binding.pry 
     best_tipped_meal.customer 
   end 
   
@@ -46,7 +45,6 @@ class Waiter
       memo[customer] /= tips.size 
       memo 
     end 
-    binding.pry
     averages_by_customer.each{|key, val| return key if val == averages_by_customer.values.max}
   end 
   
