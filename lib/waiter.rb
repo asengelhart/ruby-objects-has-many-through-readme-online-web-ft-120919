@@ -41,6 +41,7 @@ class Waiter
       end 
       binding.pry 
       memo[customer] << meal.tip 
+      memo 
     end
     averages_by_customer = tips_by_customer.inject({}) do |memo, (customer, tips)|
       memo[customer] = tips.reduce(){|memo, tip| memo += tip}
