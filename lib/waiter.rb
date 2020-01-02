@@ -46,8 +46,6 @@ class Waiter
       memo[customer] /= tips.size 
     end 
     averages_by_customer.max{|cust_a, cust_b| cust_a.value <=> cust_b.value}.key
-      
-    end 
   end 
   
 end
