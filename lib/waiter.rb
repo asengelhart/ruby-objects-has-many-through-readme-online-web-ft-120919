@@ -38,9 +38,8 @@ class Waiter
       binding.pry 
       if memo[customer] == nil 
         memo[customer] = []
-      else 
-        memo[customer] << meal.tip 
       end 
+      memo[customer] << meal.tip 
     end
     averages_by_customer = tips_by_customer.inject({}) do |memo, (customer, tips)|
       memo[customer] = tips.reduce(){|memo, tip| memo += tip}
