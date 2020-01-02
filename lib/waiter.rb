@@ -39,7 +39,8 @@ class Waiter
         memo[customer] << meal.tip 
       end 
     end
-    
+    averages_by_customer = tips_by_customer.inject({}) do |memo, (customer, tips)
+  end 
   end 
   
 end
